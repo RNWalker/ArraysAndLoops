@@ -63,7 +63,30 @@ public class Runner {
                 } else {
                     continue;
                 }
+            }
+
 //                4. Print the sum of the numbers,
+
+        int count = 0;
+        for (int i = 0; i < numbers.size() ; i++) {
+            count += numbers.get(i); }
+        System.out.println(count);
+        //        5. Print the sum of the numbers...
+//           ...except the number 13 is unlucky, so it does not count...
+//           ...and numbers that come immediately after a 13 also do not count.
+//
+//          So [2, 7, 13, 2] would have sum of 9.
+
+        int count_2 = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            count_2 += numbers.get(i);
+            if(numbers.get(i) == 13){
+                break;
+            }
+        }
+        System.out.println(count_2);
+
+
 
 //        2. Print the difference between the largest and smallest value. Because of the way
 //        i have done this, it needs to be last
@@ -73,13 +96,7 @@ public class Runner {
                 int smallestNum = numbers.get(0);
                 int largestNum = numbers.get(numbers.size() - 1);
                 System.out.println(largestNum - smallestNum);
-                
-//        5. Print the sum of the numbers...
-//           ...except the number 13 is unlucky, so it does not count...
-//           ...and numbers that come immediately after a 13 also do not count.
-//
-//          So [2, 7, 13, 2] would have sum of 9.
+
 
             }
     }
-}
