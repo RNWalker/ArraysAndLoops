@@ -58,10 +58,18 @@ public class Runner {
 
 //        2. Print the difference between the largest and smallest value
 
-        
+        Collections.sort(numbers);
+//        System.out.println(numbers);
+        int smallestNum = numbers.get(0);
+        int largestNum = numbers.get(numbers.size() -1);
+        System.out.println(largestNum - smallestNum);
 
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+
+
 //        4. Print the sum of the numbers,
+
+        
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
