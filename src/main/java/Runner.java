@@ -31,15 +31,16 @@ public class Runner {
 //        8. Sort the list alphabetically
         Collections.sort(scottishIslands);
 //        9. Print out all the islands using a for loop
-        for (int i = 0; i < scottishIslands.size() ; i++) {
+        for (int i = 0; i < scottishIslands.size(); i++) {
             System.out.println(scottishIslands.get(i));
 
-        };
+        }
+        ;
 
 
 //        NUMBERS
-      List<Integer> numbers = new ArrayList<>();
-      Collections.addAll(numbers, 1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7);
+        List<Integer> numbers = new ArrayList<>();
+        Collections.addAll(numbers, 1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7);
 //
         System.out.println("numbers: " + numbers);
 
@@ -47,35 +48,38 @@ public class Runner {
 
         ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
 
-        for (Integer even : numbers){
-            if(even%2 == 0){
+        for (Integer even : numbers) {
+            if (even % 2 == 0) {
                 evenNumbers.add(even);
             }
-
         }
         System.out.println(evenNumbers);
 
-
-//        2. Print the difference between the largest and smallest value
-
-        Collections.sort(numbers);
-//        System.out.println(numbers);
-        int smallestNum = numbers.get(0);
-        int largestNum = numbers.get(numbers.size() -1);
-        System.out.println(largestNum - smallestNum);
-
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
+        for (int i = 0; i < numbers.size(); i++)
+            if (numbers.get(i) == 1) {
+                if (numbers.get(i) - numbers.get(i + 1) == 0) {
+                    System.out.println("True");
+                } else {
+                    continue;
+                }
+//                4. Print the sum of the numbers,
 
+//        2. Print the difference between the largest and smallest value. Because of the way
+//        i have done this, it needs to be last
 
-//        4. Print the sum of the numbers,
-
-        
+                Collections.sort(numbers);
+//        System.out.println(numbers);
+                int smallestNum = numbers.get(0);
+                int largestNum = numbers.get(numbers.size() - 1);
+                System.out.println(largestNum - smallestNum);
+                
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
 //
 //          So [2, 7, 13, 2] would have sum of 9.
 
-}
+            }
     }
-
+}
