@@ -35,16 +35,31 @@ public class Runner {
             System.out.println(scottishIslands.get(i));
 
         };
-        }
+
 
 //        NUMBERS
-//        List<Integer> numbers = new ArrayList<>();
-//        Collections.addAll(numbers, 1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7);
+      List<Integer> numbers = new ArrayList<>();
+      Collections.addAll(numbers, 1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7);
 //
-//        System.out.println("numbers: " + numbers);
+        System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
+
+        ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
+
+        for (Integer even : numbers){
+            if(even%2 == 0){
+                evenNumbers.add(even);
+            }
+
+        }
+        System.out.println(evenNumbers);
+
+
 //        2. Print the difference between the largest and smallest value
+
+        
+
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
 //        4. Print the sum of the numbers,
 //        5. Print the sum of the numbers...
@@ -53,5 +68,6 @@ public class Runner {
 //
 //          So [2, 7, 13, 2] would have sum of 9.
 
+}
     }
 
